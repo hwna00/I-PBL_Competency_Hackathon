@@ -1,0 +1,43 @@
+#container {
+  display: none;
+}
+
+#btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.title {
+  text-align: center;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+}
+
+.canvas > canvas {
+  border-radius: 16px;
+}
+
+.btn {
+  background-color: #4caf50; /* 녹색 배경 */
+  border: none; /* 테두리 없앰 */
+  color: white; /* 텍스트 색상 흰색 */
+  padding: 12px 48px; /* 상하 좌우 패딩 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  text-decoration: none; /* 텍스트 밑줄 없앰 */
+  display: inline-block; /* 인라인 블록 요소로 표시 */
+  font-size: 16px; /* 폰트 크기 */
+  margin: 4px 2px; /* 마진 */
+  cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+  border-radius: 8px; /* 버튼 모서리를 둥글게 */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* 그림자 효과 */
+  transition: all 0.3s; /* 호버 효과를 위한 전환 시간 설정 */
+}
+
+.btn:hover {
+  background-color: #45a049; /* 버튼을 호버할 때 배경색 변경 */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 32px 0 rgba(0, 0, 0, 0.19); /* 호버 시 그림자 효과 강조 */
+}
