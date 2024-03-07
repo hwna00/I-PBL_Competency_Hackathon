@@ -3,8 +3,12 @@
   <head>
     <title>Stay Focus</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
+    <header>
+      <h1>Stay focused when driving!!!</h1>
+    </header>
     <div id="container">
       <h1 class="title" id="alert-container"></h1>
       <div class="canvas">
@@ -17,10 +21,7 @@
       <button class="btn" type="button" onclick="init()">Start</button>
     </div>
 
-    <div id="report">
-      <h3>총 00시간 운전했습니다</h3>
-      <span>운전에 집중한 시간은 아래와 같습니다.</span>
-    </div>
+    <div id="report"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>

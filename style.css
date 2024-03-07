@@ -2,13 +2,13 @@
   display: none;
 }
 
-#btn-container {
+#btn-block {
   display: flex;
   justify-content: center;
   margin: 40px 0px;
 }
 
-.title {
+h1 {
   text-align: center;
 }
 
@@ -19,6 +19,12 @@
 
 .canvas > canvas {
   border-radius: 16px;
+}
+
+#btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .btn {
@@ -40,4 +46,21 @@
 .btn:hover {
   background-color: #45a049; /* 버튼을 호버할 때 배경색 변경 */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 32px 0 rgba(0, 0, 0, 0.19); /* 호버 시 그림자 효과 강조 */
+}
+
+#report {
+  display: none;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+}
+
+.chart-container > canvas {
+  width: 400px !important;
+  height: 400px !important;
 }
