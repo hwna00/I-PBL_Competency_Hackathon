@@ -69,6 +69,10 @@ async function init() {
 }
 
 async function loop(timestamp) {
+  if (!isRunning) {
+    webcam.stop();
+    return;
+  }
   webcam.update(); // update the webcam frame
   await predict();
   window.requestAnimationFrame(loop);
@@ -82,9 +86,13 @@ async function predict() {
   const prediction = await model.predict(posenetOutput);
 
   if (prediction[2].probability.toFixed(2) > 0.9) {
+    console.log(prediction[2].className);
     alertContainer.innerText = "you're good";
   } else {
-    alertContainer.innerText = "hey, stay focus";
+    alertText = " Hey, stay focus";
+
+    alertContainer.innerText = alertText;
+    playAlertSound();
   }
 
   // finally draw the poses
@@ -105,4 +113,15 @@ function drawPose(pose) {
 
 const drawReport = () => {
   const report = document.getElementById("report");
+};
+
+let lastSoundPlayedAt = 0;
+playAlertSound = () => {
+  const now = Date.now();
+  if (now - lastSoundPlayedAt > 5000) {
+    const audioFile = "./assets/alert-sound.mp3";
+    const audio = new Audio(audioFile);
+    audio.play();
+    lastSoundPlayedAt = now;
+  }
 };
