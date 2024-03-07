@@ -152,14 +152,14 @@ const drawReport = () => {
   console.log(totalDuration, typeof totalDuration);
 
   if (totalDuration < 60) {
-    text = `${Math.floor(totalDuration)}초`;
+    text = `${Math.floor(totalDuration)}seconds`;
   } else if (totalDuration < 3600) {
-    text = `${Math.floor(totalDuration / 60)}분`;
+    text = `${Math.floor(totalDuration / 60)}minutes`;
   } else {
-    text = `${Math.floor(totalDuration / 3600)}시간`;
+    text = `${Math.floor(totalDuration / 3600)}hours`;
   }
 
-  h3.textContent = `총 ${text} 운전했습니다.`;
+  h3.textContent = `You drove for ${text}.`;
 
   const div = document.createElement("div");
   div.className = "chart-container";
